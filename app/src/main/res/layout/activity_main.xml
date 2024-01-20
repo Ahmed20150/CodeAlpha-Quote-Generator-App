@@ -18,7 +18,7 @@
         android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Quote Generator!"
+        android:text="Quoteables"
         android:textSize="35sp"
         android:textStyle="bold"
         android:typeface="serif"
@@ -35,7 +35,9 @@
         android:id="@+id/quote"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="236dp"
+        android:maxHeight="200dp"
+        android:textAlignment="center"
+        android:layout_marginTop="200dp"
         android:text="........."
         tools:text="Our Quote"
         android:textSize="40sp"
@@ -49,21 +51,35 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="...."
-        tools:text= "~Author Name"
         android:textSize="35sp"
         android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/quote"
+        app:layout_constraintVertical_bias="0.097"
+        tools:text="~Author Name" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/quote"
-        android:layout_marginTop="60dp"/>
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title"
+        android:visibility="invisible"/>
+
+
+
 
     <Button
         android:id="@+id/generateButton"
         style="@style/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Generate Quote!"
+        android:text="Generate!"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
